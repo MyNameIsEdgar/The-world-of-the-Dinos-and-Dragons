@@ -4,27 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The world of the dinos and dragons</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Enlazar archivo CSS -->
 </head>
 <body>
     <header>
         <h1>The world of the dinos and dragons</h1>
+        <p>¡Explora los mejores mods y tutoriales para Minecraft! Personaliza tu mundo con nuestras recomendaciones.</p>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="mods.html">Mods Populares</a></li>
-                <li><a href="tutoriales.html">Tutoriales</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#inicio" class="boton">Inicio</a></li>
+                <li><a href="mods.html" class="boton">Mods Populares</a></li>
+                <li><a href="tutoriales.html" class="boton">Tutoriales</a></li>
+                <li><a href="contacto.html" class="boton">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio">
-        <h2>Bienvenido a la Mejor Página de Mods para Minecraft</h2>
-        <p>Encuentra los mods más recientes y populares para mejorar tu experiencia en Minecraft.</p>
+        <div class="intro">
+            <h2>Bienvenido a la Mejor Página de Mods para Minecraft</h2>
+            <p>Encuentra los mods más recientes y populares para mejorar tu experiencia en Minecraft. Personaliza tu juego con nuevos mapas, skins, texturas y mucho más.</p>
+        </div>
+        <div class="caracteristicas">
+            <h3>¿Qué ofrecemos?</h3>
+            <ul>
+                <li>Mods optimizados y actualizados regularmente</li>
+                <li>Tutoriales detallados para la instalación</li>
+                <li>Soporte y ayuda a la comunidad</li>
+            </ul>
+        </div>
+        <div class="llamada-accion">
+            <a href="mods.html" class="boton-grande">¡Explora nuestros Mods!</a>
+        </div>
+    </section>
+
+    <section id="destacados">
+        <h3>Mods Destacados del Mes</h3>
+        <div class="destacados-container">
+            <div class="mod-destacado">
+                <h4>Bedrock Customize</h4>
+                <p>Optimiza tu experiencia en Minecraft Bedrock con texturas mejoradas y nuevos detalles visuales.</p>
+                <a href="mods.html" class="boton">Ver más</a>
+            </div>
+            <div class="mod-destacado">
+                <h4>Actions and stuff</h4>
+                <p>Mejora las animaciones de tu juego para un Minecraft mucho más atractivo y dinámico.</p>
+                <a href="mods.html" class="boton">Ver más</a>
+            </div>
+        </div>
     </section>
 
     <footer>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna duda? <a href="mailto:tucorreo@example.com">Contáctanos</a></p>
+        </section>
         <p>&copy; 2024 Página de Mods para Minecraft</p>
     </footer>
 </body>
