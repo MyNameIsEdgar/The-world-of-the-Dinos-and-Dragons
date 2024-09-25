@@ -13,3 +13,9 @@
 .boton-descarga:hover {
     background-color: #45a049;
 }
+
+ul li a img {
+    max-width: 100%; /* Hace que la imagen nunca supere el tamaño de su contenedor */
+    height: auto; /* Mantiene la proporción original */
+}
+
