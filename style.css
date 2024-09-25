@@ -40,3 +40,104 @@ ul li a img {
     background-color: #45a049;
 }
 
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de fondo suave */
+    color: #333; /* Color de texto */
+}
+
+h1, h2, h3 {
+    color: #4CAF50; /* Color verde relajante */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #2E7D32; /* Color del encabezado */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin: 0 15px; /* Espacio entre los botones */
+}
+
+nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilo para las tarjetas de secciones */
+.iconos-secciones {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s; /* Transición suave */
+}
+
+.tarjeta:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el mouse */
+}
+
+/* Estilo para las secciones */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white; /* Fondo blanco para las secciones */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #2E7D32; /* Color del pie de página */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Enlaces */
+a {
+    color: #4CAF50; /* Color de los enlaces */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Botón de descarga */
+.boton-descarga {
+    display: inline-block;
+    background-color: #4CAF50; /* Color del botón */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.boton-descarga:hover {
+    background-color: #388E3C; /* Color más oscuro al pasar el mouse */
+}
+
+
