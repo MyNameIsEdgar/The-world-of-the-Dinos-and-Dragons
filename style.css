@@ -1,69 +1,31 @@
-.boton-descarga {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.boton-descarga:hover {
-    background-color: #45a049;
-}
-
-ul li a img {
-    max-width: 100%; /* Hace que la imagen nunca supere el tamaño de su contenedor */
-    height: auto; /* Mantiene la proporción original */
-}
-
-.imagenes-inicio img {
-    transition: transform 0.3s ease;
-}
-
-.imagenes-inicio img:hover {
-    transform: scale(1.1); /* Hace zoom al pasar el mouse */
-}
-
-.boton {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.boton:hover {
-    background-color: #45a049;
-}
-
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Color de fondo suave */
-    color: #333; /* Color de texto */
+    background-color: #121212; /* Fondo oscuro para un estilo más gamer */
+    color: #E0E0E0; /* Color de texto claro */
+}
+
+/* Encabezado */
+header {
+    background-color: #1E1E1E; /* Color más oscuro para el encabezado */
+    color: #76FF03; /* Verde brillante para el texto */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
 }
 
 h1, h2, h3 {
-    color: #4CAF50; /* Color verde relajante */
+    margin: 0;
+    font-weight: bold; /* Texto en negrita */
 }
 
-/* Estilo del encabezado */
-header {
-    background-color: #2E7D32; /* Color del encabezado */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
+/* Navegación */
 nav ul {
     list-style-type: none; /* Sin viñetas */
     padding: 0;
+    margin: 20px 0;
 }
 
 nav ul li {
@@ -75,6 +37,34 @@ nav ul li a {
     text-decoration: none; /* Sin subrayado */
 }
 
+/* Estilos de botones */
+.boton-descarga, .boton {
+    display: inline-block;
+    background-color: #76FF03; /* Color vibrante para el botón */
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para un efecto de profundidad */
+}
+
+.boton-descarga:hover, .boton:hover {
+    background-color: #AEEA00; /* Color más claro al pasar el mouse */
+    transform: scale(1.05); /* Ligeramente aumentar el tamaño */
+}
+
+/* Imágenes en la sección de inicio */
+.imagenes-inicio img {
+    transition: transform 0.3s;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.imagenes-inicio img:hover {
+    transform: scale(1.1); /* Hace zoom al pasar el mouse */
+}
+
 /* Estilo para las tarjetas de secciones */
 .iconos-secciones {
     display: flex;
@@ -83,32 +73,33 @@ nav ul li a {
 }
 
 .tarjeta {
-    background: white;
+    background: rgba(255, 255, 255, 0.1); /* Fondo blanco semi-transparente */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    margin: 10px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.2s; /* Transición suave */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transición suave */
 }
 
 .tarjeta:hover {
     transform: scale(1.05); /* Aumentar tamaño al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
 }
 
 /* Estilo para las secciones */
 section {
     margin: 20px;
     padding: 20px;
-    background: white; /* Fondo blanco para las secciones */
+    background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo del pie de página */
 footer {
-    background-color: #2E7D32; /* Color del pie de página */
-    color: white;
+    background-color: #1E1E1E; /* Color del pie de página */
+    color: #76FF03; /* Verde brillante */
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -118,26 +109,19 @@ footer {
 
 /* Enlaces */
 a {
-    color: #4CAF50; /* Color de los enlaces */
+    color: #76FF03; /* Color de los enlaces */
 }
 
 a:hover {
     text-decoration: underline; /* Subrayar al pasar el mouse */
 }
 
-/* Botón de descarga */
+/* Ajustes específicos para los botones de descarga */
 .boton-descarga {
-    display: inline-block;
-    background-color: #4CAF50; /* Color del botón */
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none; /* Sin subrayado */
-    transition: background-color 0.3s; /* Transición suave */
+    padding: 12px 24px; /* Aumentar tamaño del botón */
 }
 
 .boton-descarga:hover {
-    background-color: #388E3C; /* Color más oscuro al pasar el mouse */
+    background-color: #AEEA00; /* Color más claro al pasar el mouse */
 }
-
 
