@@ -1,127 +1,181 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fondo oscuro para un estilo más gamer */
-    color: #E0E0E0; /* Color de texto claro */
-}
-
-/* Encabezado */
-header {
-    background-color: #1E1E1E; /* Color más oscuro para el encabezado */
-    color: #76FF03; /* Verde brillante para el texto */
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+    background-color: #0d0d0d; /* Fondo oscuro futurista */
+    color: #fff; /* Texto en blanco */
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
 h1, h2, h3 {
     margin: 0;
-    font-weight: bold; /* Texto en negrita */
+    font-weight: bold;
+    color: #00FF7F; /* Verde neón */
 }
 
-/* Navegación */
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a, #0d0d0d); /* Fondo con degradado suave */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #00FF7F; /* Línea verde neón */
+    box-shadow: 0 4px 15px rgba(0, 255, 127, 0.5); /* Sombra neón */
+}
+
+/* Navegación con botones estilo neon */
 nav ul {
-    list-style-type: none; /* Sin viñetas */
+    list-style-type: none;
     padding: 0;
     margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    display: inline; /* Muestra los elementos en línea */
-    margin: 0 15px; /* Espacio entre los botones */
+    position: relative;
 }
 
 nav ul li a {
-    text-decoration: none; /* Sin subrayado */
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    border: 2px solid #00FF7F; /* Borde verde neón */
+    border-radius: 50px;
+    transition: 0.4s ease;
+    position: relative;
+    z-index: 1;
 }
 
-/* Estilos de botones */
-.boton-descarga, .boton {
+nav ul li a:hover {
+    background-color: #00FF7F;
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #00FF7F, 0 0 40px #00FF7F, 0 0 60px #00FF7F; /* Brillo neón */
+}
+
+/* Efecto Hover para botones neon */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 300%;
+    height: 300%;
+    background-color: #00FF7F;
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+nav ul li a:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 50px;
+}
+
+/* Botones de descarga */
+.boton-descarga {
     display: inline-block;
-    background-color: #76FF03; /* Color vibrante para el botón */
-    color: black;
-    padding: 10px 20px;
+    background-color: #00FF7F;
+    color: #0d0d0d;
+    padding: 12px 30px;
     text-align: center;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para un efecto de profundidad */
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.4s ease;
+    box-shadow: 0 0 15px #00FF7F, 0 0 30px #00FF7F;
 }
 
-.boton-descarga:hover, .boton:hover {
-    background-color: #AEEA00; /* Color más claro al pasar el mouse */
-    transform: scale(1.05); /* Ligeramente aumentar el tamaño */
+.boton-descarga:hover {
+    box-shadow: 0 0 30px #00FF7F, 0 0 60px #00FF7F;
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
 }
 
-/* Imágenes en la sección de inicio */
+/* Estilo para las imágenes de inicio */
 .imagenes-inicio img {
-    transition: transform 0.3s;
-    border-radius: 10px; /* Bordes redondeados */
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6); /* Sombra verde neón */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagenes-inicio img:hover {
-    transform: scale(1.1); /* Hace zoom al pasar el mouse */
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
+    box-shadow: 0 0 30px rgba(0, 255, 127, 0.8); /* Aumentar la sombra */
 }
 
-/* Estilo para las tarjetas de secciones */
+/* Tarjetas de las secciones */
 .iconos-secciones {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 40px 0;
+    gap: 20px;
 }
 
 .tarjeta {
-    background: rgba(255, 255, 255, 0.1); /* Fondo blanco semi-transparente */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
-    margin: 10px;
+    background: #1a1a1a; /* Fondo oscuro de las tarjetas */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 255, 127, 0.2); /* Sombra verde neón */
     padding: 20px;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s; /* Transición suave */
+    transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .tarjeta:hover {
-    transform: scale(1.05); /* Aumentar tamaño al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+    transform: scale(1.05); /* Aumentar el tamaño */
+    box-shadow: 0 0 40px #00FF7F; /* Sombra neón más intensa */
 }
 
-/* Estilo para las secciones */
+/* Estilo de secciones */
 section {
     margin: 20px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    background: #1a1a1a; /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0 2px 20px rgba(0, 255, 127, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease;
 }
 
-/* Estilo del pie de página */
+section:hover {
+    transform: translateY(-10px); /* Elevar ligeramente */
+}
+
+/* Pie de página */
 footer {
-    background-color: #1E1E1E; /* Color del pie de página */
-    color: #76FF03; /* Verde brillante */
+    background-color: #1a1a1a;
+    color: #00FF7F;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
+    border-top: 2px solid #00FF7F;
+    box-shadow: 0 -4px 15px rgba(0, 255, 127, 0.5);
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
-/* Enlaces */
-a {
-    color: #76FF03; /* Color de los enlaces */
+/* Animación para los textos */
+h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #00FF7F, #00BFA5);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3s infinite linear;
 }
 
-a:hover {
-    text-decoration: underline; /* Subrayar al pasar el mouse */
+@keyframes shine {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 200%;
+    }
 }
-
-/* Ajustes específicos para los botones de descarga */
-.boton-descarga {
-    padding: 12px 24px; /* Aumentar tamaño del botón */
-}
-
-.boton-descarga:hover {
-    background-color: #AEEA00; /* Color más claro al pasar el mouse */
-}
-
