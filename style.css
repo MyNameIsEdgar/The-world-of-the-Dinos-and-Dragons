@@ -3,24 +3,24 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0d0d0d; /* Fondo oscuro futurista */
-    color: #fff; /* Texto en blanco */
-    overflow-x: hidden; /* Evitar scroll horizontal */
+    background-color: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
     margin: 0;
     font-weight: bold;
-    color: #00FF7F; /* Verde neón */
+    color: #00FF7F;
 }
 
 /* Encabezado */
 header {
-    background: linear-gradient(90deg, #0d0d0d, #1a1a1a, #0d0d0d); /* Fondo con degradado suave */
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a, #0d0d0d);
     padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #00FF7F; /* Línea verde neón */
-    box-shadow: 0 4px 15px rgba(0, 255, 127, 0.5); /* Sombra neón */
+    border-bottom: 2px solid #00FF7F;
+    box-shadow: 0 4px 15px rgba(0, 255, 127, 0.5);
 }
 
 /* Navegación con botones estilo neon */
@@ -44,36 +44,38 @@ nav ul li a {
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px 30px;
-    border: 2px solid #00FF7F; /* Borde verde neón */
+    border: 2px solid #00FF7F;
     border-radius: 50px;
-    transition: 0.4s ease;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Solo se hace transición de fondo y sombra */
     position: relative;
     z-index: 1;
+    display: block; /* Se asegura de que el enlace abarque el área completa */
+    overflow: hidden; /* Evita que el efecto de fondo se desborde */
 }
 
 nav ul li a:hover {
     background-color: #00FF7F;
     color: #0d0d0d;
-    box-shadow: 0 0 20px #00FF7F, 0 0 40px #00FF7F, 0 0 60px #00FF7F; /* Brillo neón */
+    box-shadow: 0 0 20px #00FF7F, 0 0 40px #00FF7F, 0 0 60px #00FF7F;
 }
 
-/* Efecto Hover para botones neon */
+/* Ajuste para el efecto hover dentro del contenedor */
 nav ul li a::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: 300%;
-    height: 300%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #00FF7F;
-    transition: transform 0.5s ease;
-    z-index: 0;
+    z-index: -1; /* Coloca el fondo detrás del texto */
+    transform: scale(0); /* Se asegura de que comience pequeño */
+    transition: transform 0.5s ease; /* Transición para agrandar el fondo */
+    border-radius: 50px; /* Mantiene las esquinas redondeadas */
 }
 
 nav ul li a:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-    border-radius: 50px;
+    transform: scale(1); /* Se agranda solo hasta el tamaño del enlace */
 }
 
 /* Botones de descarga */
@@ -88,13 +90,13 @@ nav ul li a:hover::before {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    transition: 0.4s ease;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
     box-shadow: 0 0 15px #00FF7F, 0 0 30px #00FF7F;
 }
 
 .boton-descarga:hover {
     box-shadow: 0 0 30px #00FF7F, 0 0 60px #00FF7F;
-    transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+    transform: scale(1.1);
 }
 
 /* Estilo para las imágenes de inicio */
@@ -102,13 +104,13 @@ nav ul li a:hover::before {
     width: 100%;
     max-width: 500px;
     border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6); /* Sombra verde neón */
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagenes-inicio img:hover {
-    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
-    box-shadow: 0 0 30px rgba(0, 255, 127, 0.8); /* Aumentar la sombra */
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 255, 127, 0.8);
 }
 
 /* Tarjetas de las secciones */
@@ -120,31 +122,31 @@ nav ul li a:hover::before {
 }
 
 .tarjeta {
-    background: #1a1a1a; /* Fondo oscuro de las tarjetas */
+    background: #1a1a1a;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 255, 127, 0.2); /* Sombra verde neón */
+    box-shadow: 0 4px 20px rgba(0, 255, 127, 0.2);
     padding: 20px;
     text-align: center;
     transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .tarjeta:hover {
-    transform: scale(1.05); /* Aumentar el tamaño */
-    box-shadow: 0 0 40px #00FF7F; /* Sombra neón más intensa */
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #00FF7F;
 }
 
 /* Estilo de secciones */
 section {
     margin: 20px;
     padding: 40px;
-    background: #1a1a1a; /* Fondo oscuro */
+    background: #1a1a1a;
     border-radius: 15px;
-    box-shadow: 0 2px 20px rgba(0, 255, 127, 0.2); /* Sombra suave */
+    box-shadow: 0 2px 20px rgba(0, 255, 127, 0.2);
     transition: transform 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-10px); /* Elevar ligeramente */
+    transform: translateY(-10px);
 }
 
 /* Pie de página */
