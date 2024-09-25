@@ -19,3 +19,24 @@ ul li a img {
     height: auto; /* Mantiene la proporción original */
 }
 
+.imagenes-inicio img {
+    transition: transform 0.3s ease;
+}
+
+.imagenes-inicio img:hover {
+    transform: scale(1.1); /* Hace zoom al pasar el mouse */
+}
+
+.boton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #45a049;
+}
+
