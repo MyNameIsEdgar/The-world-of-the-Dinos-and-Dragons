@@ -20,64 +20,43 @@
     </header>
 
     <section id="mods">
-        <h2>Lista de Texturas</h2>
+        <h2>Lista de Mods</h2>
         <div class="mod-list">
+            <!-- Mod 1: Actions and Stuff -->
             <article class="mod-item">
                 <h3>Actions and Stuff</h3>
                 <img src="actionsandstuff.webp" alt="Actions and Stuff" width="200">
                 <p>Este mod cambia las animaciones de Minecraft para que se vea más llamativo.</p>
                 <a href="mods/actionsstuff1021-en.mcpack" class="boton-descarga" download>Descargar Actions and Stuff</a>
-                <button class="fav-btn" onclick="toggleFavorite(this, 'Actions and Stuff')">Agregar a Favoritos</button>
+                <button class="boton-favorito" data-mod="actionsandstuff">Agregar a Favoritos</button>
             </article>
 
+            <!-- Mod 2: Bedrock Customize -->
             <article class="mod-item">
                 <h3>Bedrock Customize</h3>
                 <img src="bedrockcustomize.jpg" alt="Bedrock Customize" width="200">
                 <p>Este mod optimiza Minecraft Bedrock y añade nuevas texturas a camas, puertas, minerales, etc.</p>
                 <a href="mods/Bedrock_Customize_1.21_remastered.mcpack" class="boton-descarga" download>Descargar Bedrock Customize</a>
-                <button class="fav-btn" onclick="toggleFavorite(this, 'Bedrock Customize')">Agregar a Favoritos</button>
+                <button class="boton-favorito" data-mod="bedrockcustomize">Agregar a Favoritos</button>
             </article>
 
+            <!-- Mod 3: Chunk Visualizer -->
             <article class="mod-item">
                 <h3>Chunk Visualizer</h3>
                 <img src="chunkvisualizer.png" alt="Chunk Visualizer" width="200">
                 <p>Este mod permite visualizar los chunks de Minecraft de manera más efectiva.</p>
                 <a href="mods/ChunkVisualizer.mcpack" class="boton-descarga" download>Descargar Chunk Visualizer</a>
-                <button class="fav-btn" onclick="toggleFavorite(this, 'Chunk Visualizer')">Agregar a Favoritos</button>
+                <button class="boton-favorito" data-mod="chunkvisualizer">Agregar a Favoritos</button>
             </article>
 
         </div>
-    </section>
-
-    <section id="favoritos">
-        <h2>Mis Texturas Favoritas</h2>
-        <ul id="favoritos-list"></ul>
     </section>
 
     <footer>
         <p>&copy; 2024 The world of the dinos and dragons Página de Mods para Minecraft</p>
     </footer>
 
-    <script>
-        // Función para agregar o quitar de favoritos
-        function toggleFavorite(button, modName) {
-            const favoritosList = document.getElementById('favoritos-list');
-            const listItem = document.querySelector(`#favoritos-list li[data-mod="${modName}"]`);
-
-            if (listItem) {
-                // Si ya está en la lista, quitarlo
-                favoritosList.removeChild(listItem);
-                button.textContent = 'Agregar a Favoritos';
-            } else {
-                // Si no está, agregarlo
-                const newListItem = document.createElement('li');
-                newListItem.textContent = modName;
-                newListItem.setAttribute('data-mod', modName);
-                favoritosList.appendChild(newListItem);
-                button.textContent = 'Quitar de Favoritos';
-            }
-        }
-    </script>
+    <!-- Enlace a tu archivo JavaScript -->
+    <script src="main.js"></script>
 </body>
 </html>
-
