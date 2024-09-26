@@ -236,3 +236,49 @@ h2 {
     background-color: #00cc66;
 }
 
+/* Botones de descarga */
+.boton-descarga, .boton-favorito {
+    display: inline-block;
+    background-color: #00FF7F;
+    color: #0d0d0d;
+    padding: 12px 30px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 15px #00FF7F, 0 0 30px #00FF7F;
+    margin: 10px 0; /* Espaciado entre los botones */
+    cursor: pointer; /* Muestra el ícono de la mano cuando el botón es interactivo */
+}
+
+.boton-descarga:hover, .boton-favorito:hover {
+    box-shadow: 0 0 30px #00FF7F, 0 0 60px #00FF7F;
+    transform: scale(1.1);
+}
+
+/* Para asegurar que el botón de favoritos tenga una apariencia coherente */
+.boton-favorito {
+    background-color: #00FF7F;
+    color: #0d0d0d;
+    border: none; /* Sin borde alrededor */
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 15px #00FF7F, 0 0 30px #00FF7F;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.boton-favorito:hover {
+    background-color: #0d0d0d;
+    color: #00FF7F;
+    box-shadow: 0 0 30px #00FF7F, 0 0 60px #00FF7F;
+    transform: scale(1.1);
+}
