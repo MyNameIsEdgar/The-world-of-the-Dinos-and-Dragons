@@ -62,3 +62,70 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+<script>
+// Función para obtener los favoritos desde localStorage
+function obtenerFavoritos() {
+    return JSON.parse(localStorage.getItem('favoritosMods')) || [];
+}
+
+// Función para guardar favoritos en localStorage
+function guardarFavoritos(favoritos) {
+    localStorage.setItem('favoritosMods', JSON.stringify(favoritos));
+}
+
+// Función para agregar un mod a favoritos
+function agregarAFavoritos(mod) {
+    let favoritos = obtenerFavoritos();
+    if (!favoritos.includes(mod)) {
+        favoritos.push(mod);
+        guardarFavoritos(favoritos);
+        mostrarFavoritos();
+    }
+}
+
+// Función para eliminar un mod de favoritos
+function eliminarDeFavoritos(mod) {
+    let favoritos = obtenerFavoritos();
+    favoritos = favoritos.filter(fav => fav !== mod);
+    guardarFavoritos(favoritos);
+    mostrarFavoritos();
+}
+
+// Función para mostrar los mods favoritos en la lista
+function mostrarFavoritos() {
+    const listaFavoritos = document.getElementById('lista-favoritos');
+    listaFavoritos.innerHTML = '';
+    const favoritos = obtenerFavoritos();
+    
+    if (favoritos.length === 0) {
+        listaFavoritos.innerHTML = '<li>No tienes mods favoritos aún.</li>';
+    } else {
+        favoritos.forEach(mod => {
+            const li = document.createElement('li');
+            li.textContent = mod;
+            li.innerHTML += ` <button onclick="eliminarDeFavoritos('${mod}')">Eliminar</button>`;
+            listaFavoritos.appendChild(li);
+        });
+    }
+}
+
+// Ejemplo de cómo agregar mods específicos a favoritos
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarFavoritos(); // Mostrar favoritos cuando cargue la página
+
+    // Ejemplo de cómo agregar mods a favoritos (cambia estos nombres por los de tus mods)
+    document.getElementById('agregar-actions-stuff').addEventListener('click', () => {
+        agregarAFavoritos('Actions and Stuff');
+    });
+
+    document.getElementById('agregar-bedrock-customize').addEventListener('click', () => {
+        agregarAFavoritos('Bedrock Customize');
+    });
+
+    document.getElementById('agregar-chunk-visualizer').addEventListener('click', () => {
+        agregarAFavoritos('Chunk Visualizer');
+    });
+});
+</script>
+
