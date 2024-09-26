@@ -129,3 +129,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Al cargar la página, obtener los mods favoritos desde localStorage
+    let favoritos = JSON.parse(localStorage.getItem('favoritosMods')) || [];
+
+    // Función para actualizar la visualización de mods favoritos
+    function actualizarVisualizacionFavoritos() {
+        document.querySelectorAll('.boton-favorito').forEach(function (boton) {
+            const mod = boton.dataset.mod;
+            if (favoritos.includes(mod)) {
+                boton.textContent = 'Eliminar de Favoritos';
+                boton.classList.add('favorito-activado');
+            } else {
+                boton.textContent = 'Añadir a Favoritos';
+                boton.classList.remove('favorito-activado');
+            }
+        });
+    }
+
+    // Asignar el evento de click a todos los botones de favoritos
+    document.querySelectorAll('.boton-favorito').forEach(function (boton) {
+        boton.addEventListener('click', function () {
+            const mod = this.dataset.mod;
+
+            // Comprobar si el mod ya está en favoritos
+            if (favoritos.includes(mod)) {
+                // Eliminar de favoritos
+                favoritos = favoritos.filter(fav => fav !== mod);
+            } else {
+                // Añadir a favoritos
+                favoritos.push(mod);
+            }
+
+            // Guardar los favoritos en localStorage
+            localStorage.setItem('favoritosMods', JSON.stringify(favoritos));
+
+            // Actualizar la visualización
+            actualizarVisualizacionFavoritos();
+        });
+    });
+
+    // Actualizar la visualización inicial de los favoritos
+    actualizarVisualizacionFavoritos();
+});
+
+
