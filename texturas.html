@@ -48,7 +48,13 @@
                 <a href="mods/ChunkVisualizer.mcpack" class="boton-descarga" download>Descargar Chunk Visualizer</a>
                 <button class="boton-favorito" data-mod="chunkvisualizer">Agregar a Favoritos</button>
             </article>
+        </div>
+    </section>
 
+    <section id="favoritos">
+        <h2>Mods Favoritos</h2>
+        <div id="lista-favoritos">
+            <!-- Aquí se mostrarán los mods favoritos -->
         </div>
     </section>
 
@@ -58,5 +64,21 @@
 
     <!-- Enlace a tu archivo JavaScript -->
     <script src="main.js"></script>
+    <script>
+        // Función para mostrar los favoritos
+        function mostrarFavoritos() {
+            const listaFavoritos = document.getElementById('lista-favoritos');
+            listaFavoritos.innerHTML = ''; // Limpiar la lista antes de actualizar
+            const favoritos = JSON.parse(localStorage.getItem('favoritosMods')) || [];
+            favoritos.forEach(function(mod) {
+                const item = document.createElement('div');
+                item.textContent = mod; // Cambia esto si quieres mostrar más información
+                listaFavoritos.appendChild(item);
+            });
+        }
+
+        // Llama a mostrarFavoritos al cargar la página
+        document.addEventListener('DOMContentLoaded', mostrarFavoritos);
+    </script>
 </body>
 </html>
